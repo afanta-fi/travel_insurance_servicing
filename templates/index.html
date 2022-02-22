@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Insurance</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Travel Insurance Claim</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    <input type="text" name="duration" placeholder="Duration (in days)" required="required" />
+    <input type="text" name="net_sales" placeholder="Net Sales (in dollars)" required="required" />
+    <input type="text" name="commision" placeholder="Commission (in dollars)" required="required" />
+    <input type="text" name="age" placeholder="Age" required="required" />
+    <br>
+    <select name=country class="select" required="required">
+        <option class="red" disabled hidden selected>Destination</option>
+        {% for country in countrylist %}
+        <option value= "{{country}}">{{ country }}</option>"
+        {% endfor %}
+    </select>
+    
+    <select name=agency class="select" required="required">
+        <option disabled hidden selected>Agency</option>
+        {% for agent in agency %}
+        <option value= "{{agent}}">{{ agent }}</option>"
+        {% endfor %}
+    </select>
+    <select name=agency_type class="select" required="required">
+        <option disabled hidden selected>Agency Type</option>
+        {% for ag_type in agency_type %}
+        <option value= "{{ag_type}}">{{ ag_type }}</option>"
+        {% endfor %}
+    </select>    
+    <select name=distribution_channel class="select" required="required">
+        <option disabled hidden selected>Distribution Channel</option>
+        {% for dist_chan in distribution_channel %}
+        <option value= "{{dist_chan}}" >{{ dist_chan }}</option>"
+        {% endfor %}
+    </select>    
+    <select name=product_name class="select" required="required">
+        <option disabled hidden selected>Product Name</option>
+        {% for prod in product_name %}
+        <option value= "{{prod}}">{{ prod }}</option>"
+        {% endfor %}
+    </select>    
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+   <br>
+   {{ prediction_text }}
+ </div>
+
+
+</body>
+</html>
