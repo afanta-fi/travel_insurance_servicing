@@ -57,7 +57,7 @@ The screen grab of the web interface is displayed below. Users are asked to ente
 
 ## Conclusion
 
-Random Forest and `CatBoost` classifiers models showed strong performance. Logistic regression was also surprisingly effective with descent accuracy.  Using `CatBoost`, 80% of the true negative and 69% of the true negative rates were captured. This metrics is, however, subjected to change based on the criterion set by the firm (i.e., if more applications need to be rejected). 
+Random Forest and `CatBoost` classifiers models showed strong performance. Logistic regression was also surprisingly effective with descent accuracy.  Using `CatBoost`, 80% of the true negative and 69% of the true positive rates were captured. This metrics is, however, subjected to change based on the criterion set by the firm (i.e., if more applications need to be rejected). 
 
 Only a handful of features, namely, agents (C2B, LWC and EPX), products (2 Way Comprehensive Plan, Cancellation Plan and Single Trip Travel Protect Gold), destination continents (Asia and North and Central America), age, commission, duration, and net sales were identified as important features. Retraining the model based on these features alone resulted in a model that can the true positive rate better than the final model. This also liable to change based on preferences. If accuracy is favored, the results will change significantly. If the models are downloaded from the given link, anyone can run the models with accuracy as the major metric for evaluation.  
 
@@ -81,7 +81,7 @@ For additional info, contact the author at [afanta@alumni.cmu.edu](mailto:afanta
 ├── static
 ├── template
 ├── README.md
-├── project_3_presentation.pdf
+├── presentation.pdf
 ├── summary.pickle
 ├── app.py
 ├── index.ipynb
