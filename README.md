@@ -1,4 +1,4 @@
-# Travel Insurance
+# Travel Insurance Claim Prediction
 Abeselom Fanta Flex 20 Weeks Instructor: Abhineet Kulkarni
 
 ## Business Understanding
