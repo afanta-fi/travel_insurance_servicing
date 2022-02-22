@@ -52,9 +52,7 @@ After comparing four variants of the final `CatBoost` model, the ultimate model 
 
 The screen grab of the web interface is displayed below. Users are asked to enter values and will be prompted if their claim application is approved or denied. The web service can be activated by typing to `python app.py` into the command prompt and going to [this link](http://localhost:5000).
 
-Sample input | Sample output
-- | - 
-![web_input](./images/input.PNG) | ![web_output](./images/approved.PNG)
+![web_input](./images/web_app.jpg)
 
 
 ## Conclusion
