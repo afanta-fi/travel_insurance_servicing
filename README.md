@@ -70,8 +70,6 @@ To make better predictions, more data is required with even more destinations. T
 
 See the full analysis in the [Jupyter Notebook](./index.ipynb) or review this [presentation](./presentation.pdf).
 
-For additional info, contact the author at [afanta@alumni.cmu.edu](mailto:afanta@alumni.cmu.edu)
-
 ## Repository Structure
 
 ```
